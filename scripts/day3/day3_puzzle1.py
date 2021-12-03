@@ -39,7 +39,6 @@ Use the binary numbers in your diagnostic report to calculate the gamma rate and
 together. What is the power consumption of the submarine? (Be sure to represent your answer in decimal, not binary.)"""
 
 data = pd.read_csv("input/day3.csv", header=None, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-bin = ""
 data_counts = data.apply(pd.Series.value_counts)
 
 data_max = data_counts.idxmax()
