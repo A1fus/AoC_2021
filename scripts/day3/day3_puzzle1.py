@@ -1,5 +1,4 @@
 import pandas as pd
-from numpy import *
 
 
 """You need to use the binary numbers in the diagnostic report to generate two new binary numbers (called the gamma 
