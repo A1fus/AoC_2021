@@ -38,15 +38,17 @@ position is used. So, the epsilon rate is 01001, or 9 in decimal. Multiplying th
 Use the binary numbers in your diagnostic report to calculate the gamma rate and epsilon rate, then multiply them 
 together. What is the power consumption of the submarine? (Be sure to represent your answer in decimal, not binary.)"""
 
-data = pd.read_csv("input/day3.csv", header=None, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+data = pd.read_csv(
+    "input/day3.csv", header=None, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+)
 data_counts = data.apply(pd.Series.value_counts)
 
 data_max = data_counts.idxmax()
-bin_max =data_max.array
+bin_max = data_max.array
 res_max = int("".join(str(x) for x in bin_max), 2)
 
 data_min = data_counts.idxmin()
-bin_min =data_min.array
+bin_min = data_min.array
 res_min = int("".join(str(x) for x in bin_min), 2)
 
-print(res_max, res_min, res_max*res_min)
+print(res_max, res_min, res_max * res_min)
