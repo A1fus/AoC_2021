@@ -367,12 +367,12 @@ current = pd.Series(
         1,
     ]
 )
-
-
-for i in range(256):
-    current = current.subtract(1, fill_value=0)
-    b = pd.Series([8] * len(current[current == -1]))
-
-    current = current.append(b)
-    current = current.replace(-1, 6)
-    print(len(current))
+current_counts = current.value_counts()
+print(current_counts)
+# for i in range(256):
+#     current = current.subtract(1, fill_value=0)
+#     b = pd.Series([8] * len(current[current == -1]))
+#
+#     current = current.append(b)
+#     current = current.replace(-1, 6)
+#     print(len(current))
